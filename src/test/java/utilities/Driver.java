@@ -7,7 +7,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.opera.OperaDriver;
 
-public class Driver {
+public class Driver extends ParentClass{
 
     public static ThreadLocal<WebDriver> drivers = new ThreadLocal<>();
     public static ThreadLocal<String> browsers = new ThreadLocal<>();

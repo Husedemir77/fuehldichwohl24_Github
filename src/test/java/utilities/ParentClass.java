@@ -23,14 +23,21 @@ public class ParentClass {
     public ParentClass(){
         driver = Driver.getDriver();
         wait = new WebDriverWait(driver, 10);
-        setImplicitlyWaitTimeoutTo(10);
+        setImplicitlyWaitTimeoutTo(7);
     }
 
     public void setImplicitlyWaitTimeoutTo(int timeSeconds){
-        driver.manage().timeouts().implicitlyWait(timeSeconds, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
     public WebElement getElement(By by){
         return driver.findElement(by);
+    }
+
+    public double nurPrice(String txt){
+        double price=0;
+        txt = txt.replaceAll("€","");
+        price = Double.parseDouble(txt);
+        return price;
     }
 
     public List<WebElement> getElements(By by){
