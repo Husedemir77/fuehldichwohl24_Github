@@ -39,8 +39,8 @@ public class BlogPageStepdefs {
     }
 
     @Then("Blog page title should be {string}")
-    public void blogPageTitleShouldBe(String pageTitle) {
-        Assert.assertTrue(blogPagePOM.checkPageTitle(pageTitle));
+    public void blogPageTitleShouldBe(String expectedPageTitle) {
+        Assert.assertEquals(blogPagePOM.getPageTitle(), expectedPageTitle);
     }
 
     @Then("User should see an image for an article")

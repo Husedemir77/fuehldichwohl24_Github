@@ -74,12 +74,10 @@ public class BlogPagePOM extends ParentClass {
 
     /**
      *
-     * @param expectedPageTitle
      * @return
      */
-    public boolean checkPageTitle(String expectedPageTitle) {
-        String actualPageTitle = getText(blogPageTitle);
-        return actualPageTitle.equals(expectedPageTitle);
+    public String getPageTitle() {
+        return getText(blogPageTitle);
     }
 
     /**
