@@ -5,7 +5,7 @@ Feature: Blog Page Functionality
     And Click on the Blog link
 
   Scenario: US_01 TC_01 User should be able to go to Blog page by clicking link
-    Then Blog page title should be "Blog - fuehldichwohl24.de"
+    Then Blog page title should be "Blog"
 
   Scenario: US_01 TC_02 Each article on Blog page should have an image
     Then User should see an image for an article
