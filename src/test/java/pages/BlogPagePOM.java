@@ -39,7 +39,7 @@ public class BlogPagePOM extends ParentClass {
     /**
      *This method should be in HomePagePOM !!!
      *
-     * @param url address
+     * @param url the address of the WebSite
      */
     public void navigateToHomePage(String url) {
         driver.manage().window().maximize();
@@ -97,7 +97,7 @@ public class BlogPagePOM extends ParentClass {
 
     /**
      *
-     * @return
+     * @return true or false
      */
     public boolean clickAnImage(){
 
@@ -112,7 +112,7 @@ public class BlogPagePOM extends ParentClass {
 
     /**
      *
-     * @return
+     * @return true or false
      */
     public boolean clickTitle(){
 
@@ -130,7 +130,7 @@ public class BlogPagePOM extends ParentClass {
 
     /**
      *
-     * @return
+     * @return true or false
      */
     public boolean clickWeiterlesen(){
 
@@ -153,7 +153,7 @@ public class BlogPagePOM extends ParentClass {
     /**
      *
      * @param expectedText
-     * @return
+     * @return true or false
      */
     public boolean checkPage(String expectedText){
         String actualText = driver.findElement(titleOfArticle2).getText().toLowerCase();
