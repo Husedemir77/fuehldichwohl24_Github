@@ -13,8 +13,10 @@ public class AllTests extends Driver {
     public void deneme(){
         WebDriver driver = new Driver().getDriver();
         driver.get("https://amazon.com");
-        System.out.println("deneme");
+
     }
+
+
 
     @Test
     public void hover1() throws InterruptedException {
@@ -53,6 +55,12 @@ public class AllTests extends Driver {
         Thread.sleep(3000);
 
         driver.quit();
+
+    }
+
+    @Test
+    public void test01(){
+
 
     }
 }
