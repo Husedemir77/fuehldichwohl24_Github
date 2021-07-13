@@ -4,6 +4,7 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import pages.FuehldichgesundPage;
 
 import java.io.File;
 import java.io.IOException;
@@ -12,7 +13,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-public class ParentClass {
+public class ParentClass extends FuehldichgesundPage {
 
     protected WebDriver driver;
     protected WebDriverWait wait;
@@ -33,12 +34,6 @@ public class ParentClass {
         return driver.findElement(by);
     }
 
-    public double nurPrice(String txt){
-        double price=0;
-        txt = txt.replaceAll("€","");
-        price = Double.parseDouble(txt);
-        return price;
-    }
 
     public List<WebElement> getElements(By by){
         return driver.findElements(by);
@@ -141,4 +136,14 @@ public class ParentClass {
             e.printStackTrace();
         }
     }
+
+
+
+    public double nurPrice(String txt){
+        double price=0;
+        txt = txt.replaceAll("€","");
+        price = Double.parseDouble(txt);
+        return price;
+    }
+
 }
