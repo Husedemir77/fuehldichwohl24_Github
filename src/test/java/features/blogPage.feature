@@ -11,14 +11,17 @@ Feature: Blog Page Functionality
   Scenario: US_01 TC_02 Each article on Blog page should have an image
     Then User should see an image for an article
 
+  @RegressionTest
   Scenario: US_01 TC_03 User should be able to go to article by clicking image
     When User clicks image of any article randomly
     Then User should be able to navigate to related page
 
+  @RegressionTest
   Scenario: US_01 TC_04 User should be able to go to article by clicking title
     When User clicks the title of any article randomly
     Then User should be able to navigate to related page
 
+  @RegressionTest
   Scenario: US_01 TC_05 User should be able to go to article by clicking wieterlesen
     When User clicks any wieterlesen randomly
     Then User should be able to navigate to related page
